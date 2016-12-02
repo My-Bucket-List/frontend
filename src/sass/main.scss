@@ -1,14 +1,40 @@
 @import 'bulma'; 
 
+// *** Basic styling for layout *** 
 .container{
 	width: 800px;
 	margin: 25px auto;
 	font-size: 2em; 
 }
-
+nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 a{
 	font-size: .75em;
 	margin: 10px 20px;
 }
-
-
+// *** Basic styling for nested content *** 
+.content{
+	background-color: white;
+	border-radius: 30px;
+	width: 800px;
+	margin: 25px auto;
+	padding: 20px 10px;
+	display: flex;
+	flex-direction: row;
+}
+.panel-left{
+	width: 400px;
+	padding: 25px;
+}
+.panel-right{
+	width: 400px;
+	padding: 25px;
+}
+// *** Basic styling for home ***
+.home{
+	flex-direction: column;
+	align-items: center;
+}
