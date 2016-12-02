@@ -4,15 +4,16 @@ function RegisterController($state, UserService){
 	
 	let vm = this;
 
-	this.registerUser = registerUser;
+	vm.registerUser = registerUser;
 
 	function registerUser(user){
-		console.log(user);
+		console.log("RegisterController activated with...", user);
 
-		UserService.registerUser(user).then((resp)=>{
-			console.log(resp); 
+		UserService.register(user).then((resp)=>{
+		console.log("Created user: ", resp.data);
+		$state.go('root.home'); 
 		})	
-	}
+	};
 }
 
 RegisterController.$inject=['$state', 'UserService'];

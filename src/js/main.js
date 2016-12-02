@@ -3,12 +3,13 @@ import { routerConfig } from "./routes";
 import 'angular-ui-router'; 
 
 import { UserService } from './services/UserService'; 
+import { GoalService } from './services/GoalService'; 
 
 import { LayoutController } from 	 './controllers/LayoutController'; 
 import { HomeController } from 		 './controllers/HomeController';
 import { RegisterController } from 	 './controllers/RegisterController';
 import { LoginController } from 	 './controllers/LoginController';
-import { GoalsController } from 	 './controllers/GoalsController';
+import { GoalController } from 	     './controllers/GoalController';
 import { AccomplishController } from './controllers/AccomplishController';
 
 
@@ -19,6 +20,7 @@ angular
 	.controller('HomeController', HomeController)
 	.controller('RegisterController', RegisterController)
 	.controller('LoginController', LoginController)
-	.controller('GoalsController', GoalsController)
+	.controller('GoalController', GoalController)
 	.controller('AccomplishController', AccomplishController)
-	.service('UserService', UserService); 
+	.service('UserService', UserService)
+	.service('GoalService', GoalService); 

@@ -1,6 +1,7 @@
 const SERVER = 'https://sleepy-island-23804.herokuapp.com/'; 
 
-function GoalsController($http){
+function GoalController($http){
+	
 	let vm = this;
 
 	// this.addGoal = addGoal;
@@ -13,5 +14,5 @@ function GoalsController($http){
 	// }
 }
 
-GoalsController.$inject=['$http'];
-export { GoalsController };
+GoalController.$inject=['$http'];
+export { GoalController };
