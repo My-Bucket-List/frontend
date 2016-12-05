@@ -1,6 +1,13 @@
-function LayoutController($rootScope){
+function LayoutController($rootScope, UserService){
 	let vm = this;
-}
 
-LayoutController.$inject=['$rootScope'];
+	vm.logout = logout; 
+
+	function logout (user) {
+		console.log("Activate LayoutController logout()!")
+		UserService.logout();
+	}; 
+}; 
+
+LayoutController.$inject=['$rootScope', 'UserService'];
 export { LayoutController }; 
