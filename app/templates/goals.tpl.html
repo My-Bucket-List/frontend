@@ -1,12 +1,17 @@
 <div class="content">
 	<div class="panel-left">
 		<h1>My Goals</h1>
-		<div>
+		<div class="goals">
 			<ul>
-				<li ng-repeat="goal in goals.goals">
-					{{goal.title}}
-					{{goal.description}}
-					<img ng-src='{{goal.url}}'/>
+				<li ng-repeat="goal in goals.goals" class="goal">
+					<div>
+						{{goal.title}}
+						</br>
+						{{goal.description}}
+					</div>
+					<div>
+						<img id='img-card' ng-src='{{goal.url}}'/>
+					</div>
 				</li>
 			</ul>
 		</div>

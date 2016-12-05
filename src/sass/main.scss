@@ -52,3 +52,23 @@ a{
 button{
 	border-radius: 5px;
 }
+// *** Goals ***
+.goals{
+	ul{
+		margin: 5px;
+	}
+}
+.goal{
+	list-style: none;
+	border: 1px solid lighten(gray, 20%);
+	border-radius: 5px;
+	width: 100%;
+	font-size: 0.5em;
+	display: flex; 
+	flex-direction: row;
+	justify-content: space-between;
+}
+#img-card{
+	max-width: 75px;
+	max-height: 75px;
+}
