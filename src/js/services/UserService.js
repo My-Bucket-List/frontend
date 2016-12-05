@@ -31,6 +31,13 @@ function UserService($http, $cookies){
 		$cookies.remove('username');
     	$cookies.remove('access_token');
 	}; 
+
+	function getHeaders () {
+	    let token = $cookies.get('access_token');
+	    return {
+	      Authorization: `Bearer ${token}`
+	    };
+    }; 
 }
 
 UserService.$inject=['$http', '$cookies']; 

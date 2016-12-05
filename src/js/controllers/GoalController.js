@@ -1,18 +1,19 @@
-const SERVER = 'https://sleepy-island-23804.herokuapp.com/'; 
-
-function GoalController($http){
+function GoalController($http, $state, GoalService){
 	
 	let vm = this;
 
-	// this.addGoal = addGoal;
+	vm.goals = []; 
+	vm.add = add;
 
-	// function addGoal(banana){
-	// 	console.log(banana);
-	// 	$http.post(SERVER).then((resp)=>{
-	// 		console.log(resp);
-	// 	})
-	// }
+	function add(goal){
+		console.log('Data submitted: ', goal);
+
+		GoalService.addGoal(goal).then((resp)=>{
+			console.log('New goal: ', goal); 
+			$state.go('root.goals'); 
+		}); 
+	}; 
 }
 
-GoalController.$inject=['$http'];
+GoalController.$inject=['$http', '$state', 'GoalService'];
 export { GoalController };

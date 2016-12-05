@@ -1,12 +1,23 @@
 import { SERVER } from '../server'; 
 
-function GoalService($http){
+function GoalService($http, UserService){ 
 
-	this.addGoal = function(goal){
-		let url = SERVER + '/user/:user_id/list'; 
-		return $http.post(url, goal);
+	this.addGoal = addGoal;
+
+	function addGoal (goal) {
+		
+		console.log("GoalService addGoal activated!"); 
+
+		let req = {
+			url: `${SERVER}/goals`, 
+			data: goal,
+			method: 'POST',
+			headers: UserService.getHeaders()
 		}; 
-	}
+		console.log('req: ', req);
+		return $http(req); 
+	}; 
+}
 
-GoalService.$inject=['$http']; 
+GoalService.$inject=['$http', 'UserService']; 
 export { GoalService };
