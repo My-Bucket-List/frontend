@@ -15,8 +15,15 @@ a{
 	font-size: .65em;
 	margin: 10px 20px;
 }
+#nav-emphasis{
+	border: 2px solid lighten(gray, 25%);
+	border-radius: 5px;
+}
 #bucket{
 	height: 45px;
+}
+#logout{
+	text-decoration: underline;
 }
 // *** Basic styling for nested content *** 
 .content{

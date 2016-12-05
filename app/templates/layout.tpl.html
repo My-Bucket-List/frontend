@@ -7,16 +7,12 @@
 			</a>
 		</span>
 	</div>
-	<div><span><a href='#/register'>Register</a></span></div>
-	<div><span><a href='#/login'>Sign In</a></span></div>
-	<div><span><a href="#/" ng-click="layout.logout()">Log Out</a></span></div>
 	<div><span><a href='#/goals'>My Goals</a></span></div>
 	<div><span><a href='#/accomplishments'>My Accomplishments</a></span></div>
+	<div id="nav-emphasis"><span><a href='#/register'>Register</a></span></div>
+	<div id="nav-emphasis"><span><a href='#/login'>Sign In</a></span></div>
+	<div id="logout"><span><a href="#/" ng-click="layout.logout()">Log Out</a></span></div>
 </nav>
 
 
 <div ui-view></div>
-
-<a class="nav-item" href="#/"
-         ng-show="layout.loggedIn"
-         ng-click="layout.logout()">Logout</a>
