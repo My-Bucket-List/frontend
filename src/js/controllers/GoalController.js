@@ -21,6 +21,9 @@ function GoalController($http, $state, GoalService){
 			vm.goals = resp.data; 
 			console.log('Goals array: ', vm.goals);
 
+			console.log('Goal: ', vm.goals[0].title);
+
+			console.log('Picture: ', vm.goals[0].url);
 		}); 
 	}; 
 
