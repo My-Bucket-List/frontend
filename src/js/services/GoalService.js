@@ -3,6 +3,7 @@ import { SERVER } from '../server';
 function GoalService($http, UserService){ 
 
 	this.addGoal = addGoal;
+	this.getGoals = getGoals;
 
 	function addGoal (goal) {
 		
@@ -16,6 +17,10 @@ function GoalService($http, UserService){
 		}; 
 		console.log('req: ', req);
 		return $http(req); 
+	}; 
+
+	function getGoals () {
+		return $http.get(`${SERVER}/goals`);
 	}; 
 }
 

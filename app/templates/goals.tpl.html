@@ -1,6 +1,15 @@
 <div class="content">
 	<div class="panel-left">
 		<h1>My Goals</h1>
+		<div>
+			<ul>
+				<li ng-repeat="goal in goals.goals">
+					{{goal.title}}
+					{{goal.description}}
+					{{goal.url}}
+				</li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="panel-right">
