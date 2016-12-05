@@ -1,6 +1,7 @@
 import angular from "angular";
 import { routerConfig } from "./routes"; 
 import 'angular-ui-router'; 
+import 'angular-cookies'; 
 
 import { UserService } from './services/UserService'; 
 import { GoalService } from './services/GoalService'; 
@@ -14,7 +15,7 @@ import { AccomplishController } from './controllers/AccomplishController';
 
 
 angular
-	.module('app', ['ui.router'])
+	.module('app', ['ui.router', 'ngCookies'])
 	.config(routerConfig)
 	.controller('LayoutController', LayoutController)
 	.controller('HomeController', HomeController)
