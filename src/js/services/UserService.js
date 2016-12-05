@@ -6,6 +6,7 @@ function UserService($http, $cookies){
 	this.login = login;
 	this.setUser = setUser;
 	this.logout = logout;
+	this.getHeaders = getHeaders;
 
 	function register (user){
 		console.log("UserService activated!");
