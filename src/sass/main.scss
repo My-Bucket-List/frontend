@@ -69,11 +69,22 @@ button{
 	font-size: 0.5em;
 }
 #flex-card{
-		display: flex; 
+	display: flex; 
 	flex-direction: row;
 	justify-content: space-between;
+	text-decoration: none;
 }
 #img-card{
 	max-width: 75px;
 	max-height: 75px;
+}
+// *** Detail ***
+.single{
+	border: 1px solid red;
+	i{
+		font-size: 2em;
+	}
+	a{
+		text-decoration: none !important;
+	}
 }

@@ -4,6 +4,7 @@ function GoalService($http, UserService){
 
 	this.addGoal = addGoal;
 	this.getGoals = getGoals;
+	this.getDetail = getDetail;
 
 	function addGoal (goal) {
 		
@@ -21,6 +22,21 @@ function GoalService($http, UserService){
 
 	function getGoals () {
 		return $http.get(`${SERVER}/goals`);
+	}; 
+ 
+	function getDetail (id) {
+		
+		console.log('SRVC arg: ', id);
+
+		let req = {
+			url: `${SERVER}/goals/${ id }`,
+			method: 'GET', 
+			headers: UserService.getHeaders()
+		}; 
+
+		// console.log('SRVC goal detail: ', req);
+		
+		return $http(req);  
 	}; 
 }
 

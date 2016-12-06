@@ -25,8 +25,8 @@ $stateProvider
 		templateUrl: 'templates/goals.tpl.html',
 		controller: 'GoalController as goals'
 	})
-	.state('root.goal_detail', {
-		url: '/goalDetail',
+	.state('root.goalDetail', {
+		url: '/goalDetail/:id',
 		templateUrl: 'templates/goalDetail.tpl.html',
 		controller: 'GoalDetailController as goalDetail'
 	})

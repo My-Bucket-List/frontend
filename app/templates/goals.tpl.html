@@ -4,15 +4,15 @@
 		<div class="goals">
 			<ul>
 				<li ng-repeat="goal in goals.goals" class="goal">
-					<a href="#/goalDetail" id="flex-card">
+					<a href="#/goalDetail/{{ goal.id }}" id="flex-card">
 						<div>
-							{{goal.title}}
+							{{ goal.title }}
 							</br>
-							{{goal.description}}
+							{{ goal.description }}
 						</div>
 	
 						<div>
-							<img id='img-card' ng-src='{{goal.url}}'/>
+							<img id='img-card' ng-src='{{ goal.url }}'/>
 						</div>
 					</a>
 				</li>
