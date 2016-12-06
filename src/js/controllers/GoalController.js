@@ -11,7 +11,7 @@ function GoalController($http, $state, GoalService){
 
 		GoalService.addGoal(goal).then((resp)=>{
 			console.log('New goal: ', resp.data); 
-			// vm.goals.push(resp)
+			vm.goals.push(resp.data); 
 			$state.go('root.goals'); 
 		}); 
 	}; 
