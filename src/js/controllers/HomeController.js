@@ -1,15 +1,23 @@
 const SERVER = 'https://sleepy-island-23804.herokuapp.com/';
 
-function HomeController(){
+function HomeController(GoalService){
 	
-	// let vm = this;
+	let vm = this;
 
-	// function init(){
-	// 	http.get(SERVER).then((resp)=>{
-	// 		console.log(resp);
-	// 	})
-	// }
+	vm.groups = []; 
+
+	function init () {
+		
+		GoalService.getGoals().then((resp)=>{
+			console.log(resp.data); 
+
+			vm.groups = resp.data;
+
+		})
+	}; 
+
+	init();
 }
 
-HomeController.$inject=[];
+HomeController.$inject=['GoalService'];
 export { HomeController }; 

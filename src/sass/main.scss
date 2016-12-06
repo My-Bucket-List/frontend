@@ -43,7 +43,7 @@ a{
 	width: 400px;
 	padding: 25px;
 }
-// *** Basic styling for home ***
+// *** Home ***
 .home{
 	flex-direction: column;
 	align-items: center;
@@ -52,7 +52,7 @@ a{
 button{
 	border-radius: 5px;
 }
-// *** Goals ***
+// *** User Goals ***
 .goals{
 	ul{
 		margin: 5px;
@@ -87,4 +87,20 @@ button{
 	a{
 		text-decoration: none;
 	}
+}
+// *** Home Gallery ***
+.gallery{
+	width: 100%;
+	// border: 2px solid blue;
+	display: flex; 
+	flex-direction: row;
+	flex-wrap: wrap; 
+	justify-content: space-around;
+	align-items: flex-end;
+}
+.child{
+	// border: 2px solid yellow;
+	margin: 25px 25px;
+	height: 200px;
+	width: 200px;
 }
