@@ -26,7 +26,6 @@ function UserService($http, $cookies){
 	function setUser (data) {
 	    $cookies.put('username', data.username);
 	    $cookies.put('access_token', data.access_token);
-	    // $cookies.put('admin', data.admin);
 	    $cookies.put('id', data.id); 
 	    console.log("set a user: ", data)
 	  };

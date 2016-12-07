@@ -4,6 +4,7 @@ function LoginController($rootScope, $state, UserService){
 	vm.login = login;
 
 	function login(user){
+		
 		console.log("LoginController activated with...", user);
 
 		UserService.login(user).then(
@@ -12,7 +13,7 @@ function LoginController($rootScope, $state, UserService){
 				UserService.setUser(resp.data);
 
 				$rootScope.$broadcast('loginChange', {});
-				
+
 				$state.go('root.goals');
 			}, 
 			errors => {
