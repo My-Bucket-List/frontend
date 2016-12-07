@@ -21,7 +21,7 @@ $stateProvider
 		controller: 'LoginController as login'
 	})
 	.state('root.goals', {
-		url: '/goals',
+		url: '/user/:user_id',
 		templateUrl: 'templates/goals.tpl.html',
 		controller: 'GoalController as goals'
 	})

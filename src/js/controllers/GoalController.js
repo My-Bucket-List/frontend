@@ -1,34 +1,30 @@
-function GoalController($http, $state, GoalService){
+function GoalController($cookies, $http, $state, GoalService, UserService, $stateParams){
 	
 	let vm = this;
 
 	vm.goals = []; 
 	vm.add = add;
 	vm.showGoals = false;
+	vm.userId = $cookies.get('id'); 
 
 	function add (goal) {
-		console.log('Data submitted: ', goal);
-
-		GoalService.addGoal(goal).then((resp)=>{
-			console.log('New goal: ', resp.data); 
+			GoalService.addGoal(goal).then((resp)=>{
+			console.log('New goal: ', resp.data); 	
 			vm.goals.push(resp.data); 
 			$state.go('root.goals'); 
 		}); 
 	}; 
 
 	function init () {
-		GoalService.getGoals().then((resp)=>{
-			vm.goals = resp.data; 
-			console.log('Goals array: ', vm.goals);
-
-			console.log('Goal: ', vm.goals[0].title);
-
-			console.log('Picture: ', vm.goals[0].url);
+			console.log('CTRL id: ', vm.userId); 
+			GoalService.getUserGoals(vm.userId).then((resp)=>{
+				console.log('response: ', resp.data); 
+				vm.goals = resp.data; 
 		}); 
 	}; 
 
 	init(); 
 }
 
-GoalController.$inject=['$http', '$state', 'GoalService'];
+GoalController.$inject=['$cookies', '$http', '$state', 'GoalService', 'UserService', '$stateParams'];
 export { GoalController };

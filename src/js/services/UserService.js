@@ -7,6 +7,7 @@ function UserService($http, $cookies){
 	this.setUser = setUser;
 	this.logout = logout;
 	this.getHeaders = getHeaders;
+	this.getId = getId; 
 
 	function register (user){
 		console.log("UserService activated!");
@@ -25,7 +26,15 @@ function UserService($http, $cookies){
 	    $cookies.put('username', data.username);
 	    $cookies.put('access_token', data.access_token);
 	    // $cookies.put('admin', data.admin);
+	    $cookies.put('id', data.id); 
+	    console.log("set a user: ", data)
 	  };
+
+	function getId () {
+		let id = $cookies.get('id'); 
+		console.log('Grab id w/ cookies: ', id); 
+		return {userId: id};
+	}; 
 
 	function logout () {
 		console.log("Activate UserService logout()!")
