@@ -5,6 +5,7 @@ function UserService($http, $cookies){
 	this.register = register;
 	this.login = login;
 	this.setUser = setUser;
+	this.isLoggedIn = isLoggedIn; 
 	this.logout = logout;
 	this.getHeaders = getHeaders;
 	this.getId = getId; 
@@ -35,6 +36,10 @@ function UserService($http, $cookies){
 		console.log('Grab id w/ cookies: ', id); 
 		return {userId: id};
 	}; 
+
+	function isLoggedIn () {
+		return $cookies.get('username') ? true : false; 
+	}
 
 	function logout () {
 		console.log("Activate UserService logout()!")

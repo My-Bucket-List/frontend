@@ -1,11 +1,19 @@
 function LayoutController($rootScope, UserService){
 	let vm = this;
 
+	vm.loggedIn = false; 
 	vm.logout = logout; 
 
+	$rootScope.$on('loginChange', (event, data) => {
+      vm.loggedIn = UserService.isLoggedIn();
+ 	});
+
 	function logout (user) {
-		console.log("Activate LayoutController logout()!")
+		
 		UserService.logout();
+
+		$rootScope.$broadcast('loginChange', {});
+	
 	}; 
 }; 
 
