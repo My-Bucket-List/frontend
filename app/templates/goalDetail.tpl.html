@@ -1,5 +1,5 @@
 <div class="content single">
-	<a href="#/goals"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
+	<a href="#/user/{{ goal.userId }}"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
 		
 	<div class="panel-left">
 		
@@ -11,5 +11,6 @@
 	</div>
 	<div class="panel-right">
 		<img ng-src='{{ goalDetail.group.url }}'/>
+		<button ng-click="goalDetail.deleteGoal()">Delete</button>
 	</div>
 </div>		

@@ -6,6 +6,7 @@ function GoalService($http, UserService){
 	this.getGoals = getGoals;
 	this.getUserGoals = getUserGoals;
 	this.getDetail = getDetail;
+	this.deleteGoal = deleteGoal; 
 
 	function addGoal (goal) {
 		console.log("GoalService addGoal activated!"); 
@@ -40,6 +41,15 @@ function GoalService($http, UserService){
 			headers: UserService.getHeaders()
 		}; 	
 		return $http(req);  
+	}; 
+
+	function deleteGoal (id) {
+		let req = {
+			url: `${SERVER}/goals/${ id }`,
+			method: 'DELETE',
+			headers: UserService.getHeaders()
+		}; 
+		return $http(req)
 	}; 
 }
 
