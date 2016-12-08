@@ -18,11 +18,11 @@ function GoalController($cookies, $http, $state, GoalService, UserService, $stat
 	}; 
 
 	function init () {
-			GoalService.getUserGoals(vm.userId).then((resp)=>{
+		GoalService.getUserGoals(vm.userId).then((resp)=>{
 
-				let goalList = resp.data.filter(checkCompleteStatus); 
+			let goalList = resp.data.filter(checkCompleteStatus); 
 
-				vm.goals = goalList; 
+			vm.goals = goalList; 
 		}); 
 	}; 
 
