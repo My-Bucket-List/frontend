@@ -13,9 +13,16 @@ function GoalController($cookies, $http, $state, GoalService, UserService, $stat
 		}); 
 	}; 
 
+	function checkCompleteStatus (item) {
+		return item.completed == false;
+	}; 
+
 	function init () {
 			GoalService.getUserGoals(vm.userId).then((resp)=>{
-				vm.goals = resp.data; 
+
+				let goalList = resp.data.filter(checkCompleteStatus); 
+
+				vm.goals = goalList; 
 		}); 
 	}; 
 
