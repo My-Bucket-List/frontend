@@ -26,7 +26,7 @@ function GoalDetailController($state, $stateParams, GoalService){
 
 	function completeGoal () {
 		GoalService.completeGoal(vm.id).then((resp)=>{
-			$state.go('root.goals'); 
+			$state.go('root.accomplish'); 
 		}); 
 	}; 
 }
