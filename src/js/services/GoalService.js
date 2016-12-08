@@ -7,7 +7,8 @@ function GoalService($http, UserService){
 	this.getUserGoals = getUserGoals;
 	this.getDetail = getDetail;
 	this.deleteGoal = deleteGoal; 
-	this.completeGoal = completeGoal; 
+	this.completeGoal = completeGoal;
+	// this.isCompleted = isCompleted;
 
 	function addGoal (goal) {
 		console.log("GoalService addGoal activated!"); 
@@ -61,6 +62,17 @@ function GoalService($http, UserService){
 		}; 
 		return $http(req)
 	}; 
+
+	// function isCompleted (id) {
+	// 	let req = {
+	// 		url: `${SERVER}/goals/${ id }`,
+	// 		method: 'GET', 
+	// 		headers: UserService.getHeaders()
+	// 	}; 	
+	// 	let resp = $http(req);  
+	// 	console.log('isCompleted resp: ', resp); 
+	// 	return resp.completed == true ? true : false; 
+	// }; 
 }
 
 GoalService.$inject=['$http', 'UserService']; 

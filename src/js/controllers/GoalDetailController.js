@@ -1,15 +1,32 @@
-function GoalDetailController($state, $stateParams, GoalService){
+function GoalDetailController($state, $stateParams, GoalService, $rootScope){
 	
 	let vm = this;
 	vm.id = $stateParams.id;
 	vm.group = {}; 
 	vm.deleteGoal = deleteGoal;
 	vm.completeGoal = completeGoal;
+	vm.isComplete = false; 
 	
+	$rootScope.$on('isCompleteChange', (event, data) => {
+	    console.log("hit rootscope function!!!!! Success you beautiful coder!!!!"); 
+ 		
+ 		if (vm.isComplete === false){
+ 			vm.isComplete = true;
+ 		} else {
+ 			vm.isComplete = false; 
+ 		}
 
+ 	});
 
 	function init () {
 		GoalService.getDetail(vm.id).then((resp)=>{
+			
+			if (resp.data[0].completed === false) {
+				vm.isComplete = false; 
+			} else {
+				vm.isComplete = true; 
+			}
+
 			vm.group = resp.data[0]; 
 			console.log(vm.group); 
 		}); 
@@ -26,10 +43,13 @@ function GoalDetailController($state, $stateParams, GoalService){
 
 	function completeGoal () {
 		GoalService.completeGoal(vm.id).then((resp)=>{
+
+			$rootScope.$broadcast('isCompleteChange', {});
+
 			$state.go('root.accomplish'); 
 		}); 
 	}; 
 }
 
-GoalDetailController.$inject=['$state', '$stateParams', 'GoalService'];
+GoalDetailController.$inject=['$state', '$stateParams', 'GoalService', '$rootScope'];
 export { GoalDetailController };
