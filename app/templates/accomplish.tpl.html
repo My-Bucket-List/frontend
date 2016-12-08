@@ -1,3 +1,21 @@
 <div class="content">
-	<h1>My Accomplishments</h1>
-</div>
+		<h1>My Accomplishments</h1>
+		<div>
+			<ul>
+				<li ng-repeat="goal in accomplish.goals" class="goal">
+					<a href="#/goalDetail/{{ goal.id }}" id="flex-card">
+						<div>
+							{{ goal.title }}
+							</br>
+							{{ goal.description }}
+						</div>
+					
+						<div>
+							<img id='img-card' ng-src='{{ goal.url }}'/>
+						</div>
+					</a>
+				</li>
+			
+			</ul>
+		</div>
+	</div>
