@@ -16,8 +16,6 @@ function AccomplishController($rootScope, GoalService, $cookies){
 
 			vm.goals = goalList; 
 
-			// vm.goals = resp.data; 
-
 		}); 
 	}; 
 
