@@ -1,12 +1,12 @@
 <nav>
 	<div>
 		<span>
-			<a href='#/' ng-show="!layout.loggedIn">
-				<!-- <img id="bucket" src="https://d30y9cdsu7xlg0.cloudfront.net/png/394460-200.png"> -->
+			<a href='#/'>
 				<img id="bucket" src="https://d30y9cdsu7xlg0.cloudfront.net/png/7891-200.png">
 			</a>
 		</span>
 	</div>
+
 	<div><span><a href='#/user/{{ goal.userId }}' ng-show="layout.loggedIn">My Goals</a></span></div>
 	<div><span><a href='#/accomplishments' ng-show="layout.loggedIn">My Accomplishments</a></span></div>
 	<div><span><a href='#/register' ng-show="!layout.loggedIn" id="nav-emphasis">Register</a></span></div>

@@ -4,6 +4,8 @@ function GoalDetailController($state, $stateParams, GoalService){
 	vm.id = $stateParams.id;
 	vm.group = {}; 
 	vm.deleteGoal = deleteGoal;
+	vm.completeGoal = completeGoal;
+	
 
 
 	function init () {
@@ -20,7 +22,13 @@ function GoalDetailController($state, $stateParams, GoalService){
 		GoalService.deleteGoal(vm.id).then((resp)=>{
 			$state.go('root.goals');
 		}); 
-	};  
+	}; 
+
+	function completeGoal () {
+		GoalService.completeGoal(vm.id).then((resp)=>{
+			console.log('check completed status: ', resp); 
+		}); 
+	}; 
 }
 
 GoalDetailController.$inject=['$state', '$stateParams', 'GoalService'];
