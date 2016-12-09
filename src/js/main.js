@@ -14,7 +14,7 @@ import { LoginController } from 	 './controllers/LoginController';
 import { GoalController } from 	     './controllers/GoalController';
 import { GoalDetailController } from './controllers/GoalDetailController'; 
 import { AccomplishController } from './controllers/AccomplishController';
-
+import { AccomplishDetailController } from './controllers/AccomplishDetailController';
 
 angular
 	.module('app', ['ui.router', 'ngCookies'])
@@ -26,5 +26,6 @@ angular
 	.controller('GoalController', GoalController)
 	.controller('GoalDetailController', GoalDetailController)
 	.controller('AccomplishController', AccomplishController)
+	.controller('AccomplishDetailController', AccomplishDetailController)
 	.service('UserService', UserService)
 	.service('GoalService', GoalService); 

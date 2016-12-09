@@ -3,10 +3,12 @@
 	<div>
 		<ul>
 			<li ng-repeat="goal in accomplish.goals" class="goal">
-				<a href="#/goalDetail/{{ goal.id }}" id="flex-card">
+				<a href="#/accomplishDetail/{{ goal.id }}" id="flex-card">
 					<div>
+						Title
 						{{ goal.title }}
 						</br>
+						Description 
 						{{ goal.description }}
 					</div>
 				

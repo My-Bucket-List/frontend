@@ -35,6 +35,11 @@ $stateProvider
 		templateUrl: 'templates/accomplish.tpl.html',
 		controller: 'AccomplishController as accomplish'
 	})
+	.state('root.accomplishDetail', {
+		url: '/accomplishDetail/:id', 
+		templateUrl: 'templates/accomplishDetail.tpl.html', 
+		controller: 'AccomplishDetailController as accomplishDetail'
+	})
 
 	$urlRouterProvider.otherwise('/home');
 }

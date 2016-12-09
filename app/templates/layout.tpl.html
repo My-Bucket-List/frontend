@@ -7,12 +7,38 @@
 		</span>
 	</div>
 
-	<div><span><a href='#/user/{{ goal.userId }}' ng-show="layout.loggedIn">My Goals</a></span></div>
-	<div><span><a href='#/accomplishments' ng-show="layout.loggedIn">My Accomplishments</a></span></div>
-	<div><span><a href='#/register' ng-show="!layout.loggedIn" id="nav-emphasis">Register</a></span></div>
-	<div><span><a href='#/login' ng-show="!layout.loggedIn" id="nav-emphasis">Sign In</a></span></div>
-	<div id="logout"><span><a href="#/" ng-click="layout.logout()" ng-show="layout.loggedIn">Log Out</a></span></div>
+	<div>
+		<span>
+			<a href='#/user/{{ goal.userId }}' ng-show="layout.loggedIn">
+				My Goals
+			</a>
+		</span>
+	</div>
+	<div>
+		<span>
+			<a href='#/accomplishments' ng-show="layout.loggedIn">
+				My Accomplishments
+			</a>
+		</span>
+	</div>
+	<div>
+		<span>
+			<a href='#/register' ng-show="!layout.loggedIn" id="nav-emphasis">	Register
+			</a>
+		</span>
+	</div>
+	<div>
+		<span>
+			<a href='#/login' ng-show="!layout.loggedIn" id="nav-emphasis">		Sign In
+			</a>
+		</span>
+	</div>
+	<div id="logout">
+		<span>
+			<a href="#/" ng-click="layout.logout()" ng-show="layout.loggedIn">	  Log Out
+			</a>
+		</span>
+	</div>
 </nav>
-
 
 <div ui-view></div>
