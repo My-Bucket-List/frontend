@@ -1,22 +1,40 @@
-<div class="content accomplish">
-	<div><h1>My Accomplishments</h1></div>
-	<div>
-		<ul>
-			<li ng-repeat="goal in accomplish.goals" class="goal">
-				<a href="#/accomplishDetail/{{ goal.id }}" id="flex-card">
-					<div>
-						Title
-						{{ goal.title }}
-						</br>
-						Description 
-						{{ goal.description }}
+<div class="container">
+	<h1 class="style-header-accomplish">
+		My Accomplishments
+	</h1>
+</div>
+
+<div>
+	<ul>
+		<li ng-repeat="goal in accomplish.goals">
+			<div class="box">	
+				<article class="media">
+					<div class="media-left">
+						<figure class="image is-200x200">
+							<img ng-src='{{ goal.url }}'/>
+						</figure>
 					</div>
-				
-					<div>
-						<img id='img-card' ng-src='{{ goal.url }}'/>
+					<div class="media-content">
+						<div class="content">
+							<p>
+								<strong>{{ goal.title }}</strong>
+								<br>
+							 	<small>{{ goal.description }}</small>
+							</p>
+							
+						</div>
+						
+						<nav class="level">
+							<div class="level-left">
+								<a href="#/accomplishDetail/{{ goal.id }}">
+								See more
+								</a>
+							</div>
+						</nav>
+
 					</div>
-				</a>
-			</li>
-		</ul>
-	</div>
+				</article>
+			</div>
+		</li>
+	</ul>
 </div>
