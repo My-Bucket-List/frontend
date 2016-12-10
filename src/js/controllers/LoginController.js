@@ -8,7 +8,7 @@ function LoginController($rootScope, $state, UserService){
 		console.log("LoginController activated with...", user);
 
 		UserService.login(user).then(
-			resp => { 
+			resp => {  
 
 				UserService.setUser(resp.data);
 

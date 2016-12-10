@@ -36,7 +36,7 @@ function UserService($http, $cookies){
 
 	function isLoggedIn () {
 		return $cookies.get('username') ? true : false; 
-	}
+	}; 
 
 	function logout () {
 		console.log("Activate UserService logout()!")
