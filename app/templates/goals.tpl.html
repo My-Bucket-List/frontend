@@ -4,15 +4,9 @@
 		<div class="goals">
 			<ul>
 				<li ng-repeat="goal in goals.goals" class="goal">
-					<a href="#/goalDetail/{{ goal.id }}" id="flex-card">
+					<a href="#/goalDetail/{{ goal.id }}" class="button is-outlined is-large" id="goal-card">
 						<div>
 							{{ goal.title }}
-							</br>
-							{{ goal.description }}
-						</div>
-	
-						<div>
-							<img id='img-card' ng-src='{{ goal.url }}'/>
 						</div>
 					</a>
 				</li>
@@ -43,7 +37,7 @@
 			  <span class="help is-danger"></span>
 			</p>
 
-			<button>Create New Goal</button>
+			<button class="button is-medium is-primary">Create</button>
 		</form>
 	</div>
 </div>
