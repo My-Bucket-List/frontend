@@ -12,7 +12,7 @@ function LayoutController($rootScope, UserService, $cookies){
 
 	function init () {
 		console.log('userId', vm.userId); 
-		if (vm.userId !== null) {
+		if (vm.userId !== null && vm.userId !== undefined) {
 			vm.loggedIn = true;
 		}
 	}; 

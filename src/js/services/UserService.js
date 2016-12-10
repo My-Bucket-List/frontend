@@ -42,6 +42,7 @@ function UserService($http, $cookies){
 		console.log("Activate UserService logout()!")
 		$cookies.remove('username');
     	$cookies.remove('access_token');
+    	$cookies.remove('id'); 
 	}; 
 
 	function getHeaders () {
