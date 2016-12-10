@@ -98,10 +98,15 @@ button{
 	align-items: flex-end;
 }
 .child{
-	// border: 2px solid yellow;
-	margin: 10px;
-	height: 100px;
-	width: 100px;
+	border: none; 
+	margin: 0 20px 20px 20px;
+	width: 145px;
+	height: 145px;
+	img{
+		border-radius: 50%;
+		height: 140px;
+		width: 140px;
+	} 
 }
 // *** Accomplishments ***
 .accomplish{
