@@ -39,12 +39,24 @@ a{
 	flex-direction: row;
 }
 .panel-left{
-	width: 400px;
+	// border: 2px solid pink;
+	width: 500px;
 	padding: 25px;
 }
 .panel-right{
+	// border: 1px solid orange;
 	width: 400px;
 	padding: 25px;
+	margin: 15px; 
+}
+#panel-right-goal{
+	display: flex;
+	flex-direction: column; 
+	// align-items: center;
+	div{
+		// border: 2px solid red; 
+		padding: 0px;
+	}
 }
 button{
 	border-radius: 5px;
@@ -68,13 +80,16 @@ button{
 }
 // *** Goal Detail ***
 .single{
-	border: 1px solid red;
+	// border: 1px solid red;
 	i{
 		font-size: 2em;
 	}
 	a{
 		text-decoration: none;
 	}
+}
+#icon-text-button{
+	margin: 4px 0px 4px 10px;
 }
 // *** Home Gallery ***
 .gallery{
@@ -108,4 +123,7 @@ button{
 	font-weight: bold; 
 	display: inline-block;
 	margin: 0px 114px;
+}
+#accomplish-see-more{
+	margin: 0px;
 }
