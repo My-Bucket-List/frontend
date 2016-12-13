@@ -11,15 +11,13 @@
 				<article class="media">
 					<div class="media-left">
 						<figure class="image is-200x200">
-							<img ng-src='{{ goal.url }}'/>
+							<img class="goal-image-spec" ng-src='{{ goal.url }}'/>
 						</figure>
 					</div>
-					<div class="media-content">
+					<div class="media-content" id="accomplish-title-card">
 						<div class="content">
 							<p>
 								<strong>{{ goal.title }}</strong>
-								<br>
-							 	<small>{{ goal.description }}</small>
 							</p>
 							
 						</div>

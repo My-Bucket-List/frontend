@@ -1,27 +1,20 @@
 <div class="contents single">
 	<a href="#/user/{{ goal.userId }}"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
-		
-	<div class="panel-left">
+	<div class="panel-left" id="goal-left-panel">
 		<p>
-			</br>
-			<h7>{{ goalDetail.group.title }}</h7>
-			</br>
-			<small>{{ goalDetail.group.description }}</small>
+			<strong>{{ goalDetail.group.title }}</strong>
+			<br><br>
+			<span class="text-fill-goal" >{{ goalDetail.group.description }}</span>
 		</p>
 	</div>
 	<div class="panel-right" id="panel-right-goal">
-		
 		<div>
-			<img ng-src='{{ goalDetail.group.url }}'/>
+			<img class="goal-image-spec" ng-src='{{ goalDetail.group.url }}'/>
 		</div>
-		
 		<div>
 			<button ng-click="goalDetail.completeGoal()" ng-show="!goalDetail.isComplete" class="button is-success"><i class="fa fa-check-circle" aria-hidden="true"></i><span id="icon-text-button">Move to Accomplishments</span></button>
-			
 		</div>
-
 		<div>
-
 			<button ng-click="goalDetail.deleteGoal()" class="button is-link"><small>Delete</small></button>
 		</div>
 
