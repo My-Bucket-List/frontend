@@ -1,55 +1,16 @@
-# Installation
+# My Bucket List 
 
-#### Prerequisites
+#### Learning Objectives
+ * Demonstrate an understanding of AngularJS Controllers, Models & View Models.
+ * Demonstrate best practices with ControllerAs Syntax.
+ * Demonstrate understanding of how to create and use AngularJS Services.
+* Show design with UI Router.
 
-Make sure you have an up to date installation of `npm`
-with `brew update` followed by either `brew install npm` or `brew upgrade npm`.
+#### Instructions
 
-Then use npm to install the following apps with `npm install -g $APP_NAME`
-* `gulp-cli`
-* `surge`
+The landing page features images from various users' goals, or "bucket list" items. 
 
-Finally, I would strongly encourage you to install the `newapp` script from [here][newapp].
-
-[newapp]: https://gist.github.com/kingcons/a25733c233faf10847cbb4ff557e6843
-
-# Usage
-
-#### If you are using the `newapp` tool
-
-*NOTE:* If you do not use a lowercased project/folder name, the automatic deploy to surge with `npm run deploy` will fail as surge.sh always expects lowercased names.
-
-1. Run `$ newapp template <project name>`
-2. Change in to your new project
-3. Initialize Git `$ git init`
-4. Build
-
-#### If you are NOT using the `newapp` tool
-
-1. Clone down this repo
-2. Rename and change into the project folder
-3. Remove `git` from it `$ rm -rf .git`
-4. Initialize Git `$ git init`
-5. Install the dependencies `$ npm install`
-6. Build 
-
-
-# Features
-
-This template features a couple different tools. First it utalizes both NPM and Gulp for different tasks.
-
-## Gulp Tasks
-
-All tasks are listed below, but ideally you will just need to run `gulp start` and be done with it.
-
-- `gulp start`: This is the primary task that will fire up the server and allow you to start building
-- `gulp server`: This will start a Browsersync server with live-reload
-- `gulp sass`: This will compile your SASS
-- `gulp browserify`: This will transpile your JS from ES6 to ES5
-- `gulp watch`: This will start a watcher for files
-
-## NPM Scripts
-
-- `npm run test`: This will launch Mocha in your terminal and run any tests
-- `npm run deploy`: This will deploy your application to Surge.sh for you
-- `npm run lint`: This will run ESLint on your `/src/js` folder
+1. You may register and login as a new user if you wish to enter the site. Alternately, you may login to an example account. Log in with username "alexw" and password "cookies". 
+2. The "My Goals" view allows you see your goals. Click into each goal to see more details! This view also allows users to upload new goals. Try adding a new goal! Click "Move to Accomplishments" once you have completed each goal. 
+3. The "My Accomplishments" view allows you to see your accomplished goals! The MVP, available now, allows you to view details of each task. I am currently building out the features to add your experiences and additional photos. In the upcoming version, you will also be able to comment on other people's accomplishments! 
+4. Logout. 
