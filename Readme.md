@@ -4,7 +4,9 @@
  * Demonstrate an understanding of AngularJS Controllers, Models & View Models.
  * Demonstrate best practices with ControllerAs Syntax.
  * Demonstrate understanding of how to create and use AngularJS Services.
-* Show design with UI Router.
+ * Show design with UI Router.
+
+[View live on Surge] (http://tiy-alexwindle-bucket-list-frontend.surge.sh/#/home)
 
 #### Instructions
 
